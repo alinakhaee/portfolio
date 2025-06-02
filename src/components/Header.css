@@ -1,0 +1,44 @@
+.header-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  border-radius: 24px;
+  padding: 6px 24px;
+  gap: 18px;
+  margin-top: 20px;
+  z-index: 10;
+  position: static;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-btn.active, .nav-btn:hover {
+  background: #ffe066;
+  color: #222;
+}
+
+.hero-name {
+  font-size: clamp(2rem, 15vw, 10rem); /* Responsive, huge, but never overflows */
+  font-weight: 900;
+  color: #111;
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  width: 100%;
+  text-align: left;
+  white-space: nowrap;      /* Prevent wrapping */
+  overflow: hidden;         /* Hide overflow */
+  text-overflow: ellipsis;  /* Show ... if too long */
+  padding-left: 0;          /* Remove if you want flush left */
+} 

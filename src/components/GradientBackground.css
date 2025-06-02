@@ -1,0 +1,11 @@
+/* The inline style in the component handles most, but add a fallback and ensure stacking */
+.gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  transition: background 0.6s cubic-bezier(0.4,0,0.2,1);
+  pointer-events: none;
+} 
