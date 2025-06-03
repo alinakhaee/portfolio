@@ -13,7 +13,7 @@ export default function Header({ onNavClick }) {
 
   return (
     <header className="w-full flex justify-center pt-8 z-10">
-      <nav className="bg-black bg-opacity-80 rounded-full px-6 py-3 shadow-lg flex">
+      <nav className="bg-black bg-opacity-80 rounded-full px-6 py-3 shadow-lg flex lg:space-x-10 md:space-x-10">
         {navItems.map((item) => (
           <a
             href="#"

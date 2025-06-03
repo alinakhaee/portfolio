@@ -99,9 +99,9 @@ const EducationIcon = () => (
 
 export default function WorkCards() {
   const [selectedCard, setSelectedCard] = useState(null);
+  const [modalSkillStyles, setModalSkillStyles] = useState({});
 
-  // Memoize colors per card to avoid re-randomizing on every render of WorkCards
-  // This is a compromise: colors are random per card load, but stable during its view.
+  // Memoize colors per card for the main list preview icons
   const cardLanguageStyles = useMemo(() => {
     return cards.map(card => {
       const styles = {};
@@ -116,6 +116,22 @@ export default function WorkCards() {
       return styles;
     });
   }, []);
+
+  // Effect to generate new random styles for the modal when a card is selected
+  useEffect(() => {
+    if (selectedCard && selectedCard.languages) {
+      const newStyles = {};
+      selectedCard.languages.forEach(lang => {
+        const bgColor = getRandomHexColor();
+        newStyles[lang] = {
+          backgroundColor: bgColor,
+          color: getContrastTextColor(bgColor),
+          opacity: 0.8, // Retaining opacity from original styling
+        };
+      });
+      setModalSkillStyles(newStyles);
+    }
+  }, [selectedCard]);
 
   return (
     <>
@@ -224,8 +240,8 @@ export default function WorkCards() {
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-2">Technologies & Skills</h3>
                   <div className="flex flex-wrap gap-2">
                     {selectedCard.languages.map((lang, i) => {
-                      const originalCardIndex = cards.findIndex(c => c.title === selectedCard.title);
-                      const style = cardLanguageStyles[originalCardIndex]?.[lang] || { backgroundColor: '#cccccc', color: '#000000' };
+                      // Use modalSkillStyles for the modal
+                      const style = modalSkillStyles[lang] || { backgroundColor: '#cccccc', color: '#000000' };
                       return (
                         <span
                           key={i}
