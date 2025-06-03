@@ -8,7 +8,7 @@ const intervals = [
   { title: 'Part Software Group', color: 'bg-purple-300', start: '2020-04', end: '2020-08' },
   { title: 'Smart Construction Group', color: 'bg-pink-300', start: '2020-10', end: '2021-09' },
   { title: 'Neshan Maps & Navigator', color: 'bg-orange-300', start: '2021-08', end: '2025-02' },
-  { title: 'Mitacs Internship', color: 'bg-indigo-400', start: '2025-01', end: '2025-05' },
+  { title: 'Mitacs Internship', color: 'bg-indigo-400', start: '2025-02', end: '2025-06' },
 ];
 
 // Helper function to convert YYYY-MM to months since a base year (e.g., 2000)
@@ -19,7 +19,7 @@ function dateToMonths(dateStr) {
 
 // Find min and max months for scaling
 const minTimelineDate = '2018-07'; // Start timeline a bit before the first event for padding
-const maxTimelineDate = '2025-06'; // End timeline a bit after the last event for padding
+const maxTimelineDate = '2025-07'; // End timeline a bit after the last event for padding
 
 const minMonth = dateToMonths(minTimelineDate);
 const maxMonth = dateToMonths(maxTimelineDate);
