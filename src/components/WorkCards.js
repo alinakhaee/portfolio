@@ -33,7 +33,7 @@ const cards = [
     + '\n- Implemented a **React.js** website by reusing the components used in the React Native app, to ensure a solid front-end system.'
     + '\n- Designed and fully implemented a robust backend service using **Spring Boot** and **Java**.'
     + '\n- Deployed services, databases, and files using **AWS EC2**, **RDS**, and **S3** for scalable deployments.',
-    duration: 'Feb 2025 - Aug 2025 (4 months)',
+    duration: 'Feb 2025 - Jun 2025 (4 months)',
   },
   {
     type: 'work',
