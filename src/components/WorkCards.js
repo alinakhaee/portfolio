@@ -30,7 +30,7 @@ const cards = [
     languages: ['Java', 'AWS', 'React', 'SpringBoot', 'PostgreSQL', 'React Native', 'Expo', 'Docker', 'Kubernetes'],
     details1: '- Full details about Project Alpha.\n- This could include screenshots, links, features, challenges, and more.\n- Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n- Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
     details2: '- Full details about Project Alpha.\n- This could include screenshots, links, features, challenges, and more.\n- Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n- Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
-    duration: 'Jan 2025 - May 2025', // Placeholder duration
+    duration: 'Feb 2025 - Aug 2025 (4 months)',
   },
   {
     type: 'work',
@@ -39,7 +39,7 @@ const cards = [
     languages: ['Java', 'SpringBoot', 'PostgreSQL', 'Docker', 'Kubernetes', 'Rust', 'PostGIS', 'Prometheus', 'Grafana', 'Elasticsearch', 'RabbitMQ'],
     details1: '- Full details about Project Alpha.\n- This could include screenshots, links, features, challenges, and more.\n- Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n- Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
     details2: '- Full details about Project Alpha.\n- This could include screenshots, links, features, challenges, and more.\n- Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n- Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
-    duration: 'Aug 2021 - Feb 2025', // Placeholder duration
+    duration: 'Aug 2021 - Feb 2025 (3 years and 7 months)', 
   },
   {
     type: 'work',
@@ -48,33 +48,33 @@ const cards = [
     languages: ['React', 'React Native', 'Expo'],
     details1: '- Full details about Project Beta.\n- This could include screenshots, links, features, challenges, and more.\n- Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n- Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
     details2: '- Full details about Project Beta.\n- This could include screenshots, links, features, challenges, and more.\n- Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n- Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
-    duration: 'Oct 2020 - Sept 2021', // Placeholder duration
+    duration: 'Oct 2020 - Sept 2021 (1 year)',
   },
   {
     type: 'work',
     title: 'Backend Developer at Part Software Group',
     description: 'In a selective internship program, I simulated an X (Twitter) REST API using Node.js, Express, and PostgreSQL.',
-    languages: ['Nodejs', 'Express', 'PostgreSQL'],
-    details1: '- In this internship, I worked with Node.js and PostgreSQL to build a social media REST API. My main focus was deploying the API so that it was accessible for users and developers to test and use. My biggest achievement in this role was successfully deploying the API, which involved handling requests, responses, and integrating the database with user data and posts.',
-    details2: '- In this internship, I worked with Node.js and PostgreSQL to build a social media REST API.\n- My main focus was deploying the API so that it was accessible for users and developers to test and use.\n- My biggest achievement in this role was successfully deploying the API, which involved handling requests, responses, and integrating the database with user data and posts.',
-    duration: 'Apr 2020 - Aug 2020', // Placeholder duration
+    languages: ['Nodejs', 'Express', 'PostgreSQL', 'Backend Development', 'REST API'],
+    details1: 'In a Back-end Development Internship program hosted by Part Softrware Group and the Ferdowsi University of Mashhad, I passed a comprehensive interview and was selected to be one of the 10 interns among 100+ student applicants.',
+    details2: '- In this internship, I worked with Node.js, Express, and PostgreSQL to build a social media REST API.\n- My main focus was deploying the API so that it was accessible for users and developers to test and use.\n- My biggest achievement in this role was successfully deploying the API, which involved handling requests, responses, and integrating the database with user data and posts.',
+    duration: 'Apr 2020 - Aug 2020 (4 months)',
   },
   {
     type: 'education',
     title: 'Master of Computer Science',
     description: 'University of Windsor, Windsor, ON, Canada. \n Specialized in Algorithm Design and Computational Geometry.',
-    languages: ['Algorithm Design', 'Computational Geometry', 'Data Structures',], 
+    languages: ['Algorithm Design', 'Computational Geometry', 'Data Structures', 'Python', 'C++'], 
     details1: 'A master\'s degree in computer science with a focus on algorithm design and computational geometry, including data structures, algorithm design, and computational geometry.',
-    details2: '- Submitted a paper to **CCCG 2025**: "Guarding Polygons with Mutually Visible π-Guards."\n- Conducted research on computational geometry under the supervision of Dr. Ahmad Biniaz.\n- GA for Algorithm Design (2x), Data Structures, Advanced Programming, and Mobile Development.',
+    details2: '- Submitted a paper to **CCCG 2025**: *"Guarding Polygons with Mutually Visible π-Guards."*\n- Implemented algorithms provided in research papers related to computational geometry using **Python** and **C++**.\n- Conducted research on computational geometry under the supervision of **Dr. Ahmad Biniaz**.\n- GA for Algorithm Design (2x), Data Structures, Advanced Programming, and Mobile Development.',
     duration: 'Sept 2023 - May 2025',
   },
   {
     type: 'education',
     title: 'Bachelor of Computer Engineering',
     description: 'Ferdowsi University of Mashhad, Mashhad, KR, Iran. \n Specialized in Software Engineering and Artificial Intelligence.',
-    languages: ['Data Structures', 'OOP', 'Web Dev', 'Databases', 'OS', 'AI'],
+    languages: ['Data Structures', 'Algorithm Design', 'Software Engineering', 'OOP', 'Web Development', 'Databases', 'OS', 'AI'],
     details1: 'A comprehensive study of software engineering and artificial intelligence, including data structures, object-oriented programming, web development, databases, operating systems, and artificial intelligence.',
-    details2: '- **Final project:** "Routing Engine for Optimizing Fuel Consumption"\n- TA for Operating Systems, Programming Fundamentals, and Advanced Programming.\n- Activities and societies: Participated in two ICPC contests, ranking third in the university.',
+    details2: '- Completed a dissertation on *"Routing Engine for Optimizing Fuel Consumption"*\n- Participated in two ICPC contests, ranking third in the university both times.\n- TA for Operating Systems, Programming Fundamentals, and Advanced Programming.',
     duration: 'Sept 2018 - March 2023',
   },
 ];
