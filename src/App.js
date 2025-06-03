@@ -107,7 +107,7 @@ export default function App() {
                 </p>
               </div>
               <div className="mt-8 text-center md:text-left">
-                <img src={chatImg} alt="Chat Illustration" className="mx-auto aspect-square w-[60vw] sm:w-[40vw] md:w-[40vw] lg:w-[45vw] xl:w-[50vw] max-w-[550px]" />
+                <img src={chatImg} alt="Chat Illustration" className="mx-auto aspect-square w-[70vw] sm:w-[60vw] md:w-[40vw] lg:w-[35vw] xl:w-[25vw] max-w-[100vw]" />
                 <a
                   href="https://storyset.com/people"
                   className="mt-2 text-sm text-white-400 hover:text-purple-300 underline block text-center"
