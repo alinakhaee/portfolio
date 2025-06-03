@@ -25,11 +25,14 @@ function getContrastTextColor(hexBgColor) {
 const cards = [
   {
     type: 'work',
-    title: 'Full Stack Developer at MealLens (Mitacs Project)',
-    description: 'Before my Master\'s graduation, I had the chance to work on a Mitacs project for MealLens, where I was responsible for entire software development process (frontend+backend).',
-    languages: ['Java', 'AWS', 'React', 'SpringBoot', 'PostgreSQL', 'React Native', 'Expo', 'Docker', 'Kubernetes'],
-    details1: '- Full details about Project Alpha.\n- This could include screenshots, links, features, challenges, and more.\n- Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n- Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
-    details2: '- Full details about Project Alpha.\n- This could include screenshots, links, features, challenges, and more.\n- Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n- Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
+    title: 'Full-stack Developer at MealLens (Mitacs Project)',
+    description: 'Before my Master\'s graduation, I had the chance to work on a Mitacs project for MealLens, where I was responsible for entire software development process (front-end + back-end).',
+    languages: ['Java', 'AWS', 'React', 'SpringBoot', 'PostgreSQL', 'React Native', 'Expo', 'Docker', 'Kubernetes', 'S3', 'EC2', 'RDS'],
+    details1: 'In a Mitacs project, I was responsible for developing the server, application, website, and cloud infrastructure for MealLens AI, a nascent AI-powered company that offers personal nutrition analysis and recommendations based on the actual inventory each user has.',
+    details2: '- Developed an IOS & Android app and a PWA using **React Native** (Expo)'
+    + '\n- Implemented a **React.js** website by reusing the components used in the React Native app, to ensure a solid front-end system.'
+    + '\n- Designed and fully implemented a robust backend service using **Spring Boot** and **Java**.'
+    + '\n- Deployed services, databases, and files using **AWS EC2**, **RDS**, and **S3** for scalable deployments.',
     duration: 'Feb 2025 - Aug 2025 (4 months)',
   },
   {
@@ -37,26 +40,32 @@ const cards = [
     title: 'Software Engineer at Neshan Maps & Navigator',
     description: 'Started as an apprentice, I\'ve had a long journey to become a skilled software engineer in terms of clean architecture and efficient big data handling using Java and SpringBoot.',
     languages: ['Java', 'SpringBoot', 'PostgreSQL', 'Docker', 'Kubernetes', 'Rust', 'PostGIS', 'Prometheus', 'Grafana', 'Elasticsearch', 'RabbitMQ'],
-    details1: '- Full details about Project Alpha.\n- This could include screenshots, links, features, challenges, and more.\n- Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n- Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
-    details2: '- Full details about Project Alpha.\n- This could include screenshots, links, features, challenges, and more.\n- Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n- Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
+    details1: 'Neshan is the leading local maps and navigation app, chosen 5 times as the best navigation app of the year in Iran. Its complete and accurate support over the complex network of local roads resulted in its excellence in the market over other well-known navigators.',
+    details2: '- **Promoted** to an Assistant Team Lead within one year due to outstanding project maintenance skills.' 
+    + '\n- **Assisted** the company in scaling up from an startup to a leading local navigation app with 10M+ users.'
+    + '\n- Designed and implemented real-time polynomial-time algorithms for traffic detection, optimizing fuel efficiency in routing, and improving ETA accuracy in congested areas'
+    + '\n- Decreased the computation time of loading large-scale traffic data up to **50%** by revising the legacy-code algorithms and designing them from scratch with a wiser approach.'
+    + '\n- Reduced memory usage by up to **40%** by rewriting heavy components in **C++** (Integrated by JNI) and **Rust**.'
+    + '\n- Deployed an XGBoost model for predicting optimal departure time for a given arrival time and route, with over **85%** accuracy.'
+    + '\n- Implemented system health monitoring with **Prometheus** and **Grafana** for 100\% uptime.',
     duration: 'Aug 2021 - Feb 2025 (3 years and 7 months)', 
   },
   {
     type: 'work',
-    title: 'Frontend Developer at Smart Construction',
-    description: 'In Smart Construction, our project was to develop a system to improve communication between workers in a construction project.',
-    languages: ['React', 'React Native', 'Expo'],
-    details1: '- Full details about Project Beta.\n- This could include screenshots, links, features, challenges, and more.\n- Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n- Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
-    details2: '- Full details about Project Beta.\n- This could include screenshots, links, features, challenges, and more.\n- Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n- Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
+    title: 'Front-end Developer at Smart Construction Group',
+    description: 'In Smart Construction Group, our project was to develop a system to improve communication between workers in a construction project.',
+    languages: ['React', 'React Native', 'Expo', 'Front-end Development', 'Mobile Development'],
+    details1: 'Smart Construction Group, founded by an associate professor at Ferdowsi University of Mashhad, is a company that develops easy-to-use and useful software for a more convenient tracking of the construction projects.',
+    details2: '- **Led** the development of a **React Native** app used by construction workers to submit daily progress.\n- Implemented user-friendly components to enhance usability, getting over **90%** satisfaction from the users (construction workers).\n- Programmed +50 React Native components, reused in the React.js website to solidify the front-end system.',
     duration: 'Oct 2020 - Sept 2021 (1 year)',
   },
   {
     type: 'work',
-    title: 'Backend Developer at Part Software Group',
+    title: 'Back-end Developer at Part Software Group',
     description: 'In a selective internship program, I simulated an X (Twitter) REST API using Node.js, Express, and PostgreSQL.',
-    languages: ['Nodejs', 'Express', 'PostgreSQL', 'Backend Development', 'REST API'],
-    details1: 'In a Back-end Development Internship program hosted by Part Softrware Group and the Ferdowsi University of Mashhad, I passed a comprehensive interview and was selected to be one of the 10 interns among 100+ student applicants.',
-    details2: '- In this internship, I worked with Node.js, Express, and PostgreSQL to build a social media REST API.\n- My main focus was deploying the API so that it was accessible for users and developers to test and use.\n- My biggest achievement in this role was successfully deploying the API, which involved handling requests, responses, and integrating the database with user data and posts.',
+    languages: ['Nodejs', 'Express', 'PostgreSQL', 'Back-end Development', 'REST API'],
+    details1: 'In a Back-end Development Internship program hosted by Part Software Group, I passed a comprehensive interview and was selected to be one of the 10 interns among 100+ student applicants.',
+    details2: '- Utilized **Node.js**, **Express**, and **PostgreSQL** to build a social media REST API similar to X (Twitter).\n- Completed the full server development from scratch to deployment on a private cloud server.\n- Tested the REST APIs for loading, security, integration, and data validity checks.',
     duration: 'Apr 2020 - Aug 2020 (4 months)',
   },
   {

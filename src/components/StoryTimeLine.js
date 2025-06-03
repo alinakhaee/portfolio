@@ -6,7 +6,7 @@ const intervals = [
   { title: 'Bachelor\'s Education', color: 'bg-blue-300', start: '2018-09', end: '2023-03' },
   { title: 'Master\'s Education', color: 'bg-green-300', start: '2023-09', end: '2025-05' },
   { title: 'Part Software Group', color: 'bg-purple-300', start: '2020-04', end: '2020-08' },
-  { title: 'Smart Construction Inc.', color: 'bg-pink-300', start: '2020-10', end: '2021-09' },
+  { title: 'Smart Construction Group', color: 'bg-pink-300', start: '2020-10', end: '2021-09' },
   { title: 'Neshan Maps & Navigator', color: 'bg-orange-300', start: '2021-08', end: '2025-02' },
   { title: 'Mitacs Internship', color: 'bg-indigo-400', start: '2025-01', end: '2025-05' },
 ];
