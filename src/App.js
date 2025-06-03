@@ -95,11 +95,11 @@ export default function App() {
     );
   } else if (selectedSection === 'Chat') {
     content = (
-      <div className="flex flex-col items-center justify-start mt-5 min-h-screen p-4 md:p-8 text-white">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row gap-8 items-stretch">
+      <div className="flex flex-col items-center justify-start mt-5 min-h-screen p-4 md:p-8 text-white flex-grow">
+        <div className="container mx-auto flex flex-col flex-grow w-full">
+          <div className="flex flex-col md:flex-row gap-8 items-stretch flex-grow">
             {/* Left Column: Text content and contact details */}
-            <div className="md:w-1/2 flex flex-col justify-between">
+            <div className="md:w-1/2 flex flex-col justify-center">
               <div className="px-4">
                 <h1 className="text-5xl font-bold mb-6">Contact Me</h1>
                 <p className="mb-6 text-lg">
@@ -107,7 +107,7 @@ export default function App() {
                 </p>
               </div>
               <div className="mt-8 text-center md:text-left">
-                <img src={chatImg} alt="Chat Illustration" className="w-64 h-64 md:w-80 md:h-80 mx-auto" />
+                <img src={chatImg} alt="Chat Illustration" className="mx-auto aspect-square w-[60vw] sm:w-[40vw] md:w-[40vw] lg:w-[45vw] xl:w-[50vw] max-w-[550px]" />
                 <a
                   href="https://storyset.com/people"
                   className="mt-2 text-sm text-white-400 hover:text-purple-300 underline block text-center"
@@ -116,20 +116,20 @@ export default function App() {
                 >
                   People illustrations by Storyset
                 </a>
-              </div>
-              <div className="mt-auto">
-                <hr className="border-gray-600 my-6" />
-                {/* <div className="mb-4">
-                  <p className="text-sm text-gray-400 uppercase tracking-wider">Phone</p>
-                  <p className="text-lg">+61 (8) 94717645</p>
-                </div> */}
-                <div className="mb-4">
-                  <p className="text-sm text-blue-800 uppercase tracking-wider font-bold">Email</p>
-                  <p className="text-lg">alinakhaeisharif@gmail.com</p>
-                </div>
-                <div>
-                  <p className="text-sm text-blue-800 uppercase tracking-wider font-bold">Address</p>
-                  <p className="text-lg">Toronto, ON, Canada</p>
+                <div className="mt-auto">
+                  <hr className="border-gray-600 my-6" />
+                  {/* <div className="mb-4">
+                    <p className="text-sm text-gray-400 uppercase tracking-wider">Phone</p>
+                    <p className="text-lg">+61 (8) 94717645</p>
+                  </div> */}
+                  <div className="mb-4">
+                    <p className="text-sm text-blue-800 uppercase tracking-wider font-bold">Email</p>
+                    <p className="text-lg">alinakhaeisharif@gmail.com</p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-blue-800 uppercase tracking-wider font-bold">Address</p>
+                    <p className="text-lg">Toronto, ON, Canada</p>
+                  </div>
                 </div>
               </div>
             </div>
