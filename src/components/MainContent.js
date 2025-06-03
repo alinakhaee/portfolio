@@ -19,7 +19,7 @@ export default function MainContent() {
       {/* Text Content - ensure it has a higher z-index if it might overlap */}
       <div className="z-10 w-full max-w-4xl self-center md:self-start mb-10 md:mb-0 md:pb-[5vmin]"> {/* Added padding-bottom to avoid overlap */}
         <p className={`text-xl md:text-2xl lg:text-3xl mx-auto md:mx-12 font-medium text-gray-700 mb-4 md:mb-6 leading-relaxed text-center md:text-left transition-all duration-1000 ease-in-out ${startAnimation ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'}`}>
-          Hello, There! <br /> Meet your trusted fullstack software engineer, <br />crafting ideas into apps, websites, and servers.
+          Hello, There! <br /> Meet your trusted Full-stack software engineer, <br />crafting ideas into apps, websites, and servers.
         </p>
         <h1
           className={`font-bold text-black leading-tight whitespace-nowrap mb-8 md:mb-16 mx-auto md:mx-12 text-center md:text-left transition-all duration-1000 ease-in-out delay-200 ${startAnimation ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'}`}
