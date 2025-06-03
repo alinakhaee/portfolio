@@ -18,7 +18,7 @@ export default function MainContent() {
     <main className="relative flex flex-col justify-start md:justify-center flex-grow px-4 py-8 w-full min-h-screen overflow-hidden">
       {/* Text Content - ensure it has a higher z-index if it might overlap */}
       <div className="z-10 w-full max-w-4xl self-center md:self-start mb-10 md:mb-0 md:pb-[5vmin]"> {/* Added padding-bottom to avoid overlap */}
-        <p className={`text-xl md:text-2xl lg:text-3xl mx-auto md:mx-12 font-medium text-gray-700 mb-4 md:mb-6 leading-relaxed text-center md:text-left transition-all duration-1000 ease-in-out ${startAnimation ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'}`}>
+        <p className={`text-lg md:text-xl lg:text-2xl mx-auto md:mx-12 font-medium text-gray-700 mb-4 md:mb-6 leading-relaxed text-center md:text-left transition-all duration-1000 ease-in-out ${startAnimation ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'}`}>
           Hello, There! <br /> Meet your trusted Full-stack software engineer, <br />crafting ideas into apps, websites, and servers.
         </p>
         <h1

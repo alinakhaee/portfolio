@@ -222,10 +222,15 @@ export default function StoryTimeline() {
                 }}
                 onClick={() => setSelectedInterval(interval)}
               >
-                <span className="font-semibold text-xs sm:text-sm text-gray-800 text-center truncate w-full px-1">{interval.title}</span>
-                <span className="text-xxs sm:text-xs text-gray-700 mt-0.5 truncate w-full px-1 text-center">
-                  {interval.start.substring(0,7)} - {interval.end.substring(0,7)}
-                </span>
+                <div className="flex flex-col items-center justify-center w-full mt-1 px-1">
+                  <span className="font-semibold text-xs sm:text-sm text-gray-800 text-center truncate w-full px-1">{interval.title}</span>
+                  <span 
+                    className="sm:text-xs text-gray-700 mt-0.5 truncate w-full px-1 text-center"
+                    style={{ fontSize: '0.625rem' }} // Ensures date is smaller than title on mobile
+                  >
+                    {interval.start.substring(0,7)} - {interval.end.substring(0,7)}
+                  </span>
+                </div>
               </div>
             );
           })}

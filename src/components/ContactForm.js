@@ -40,9 +40,9 @@ const ContactForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (validateForm()) {
-      // Here you would typically handle form submission (e.g., send data to a server)
-      // For now, we just show the success modal.
-      setShowSuccessModal(true);
+    // Here you would typically handle form submission (e.g., send data to a server)
+    // For now, we just show the success modal.
+    setShowSuccessModal(true);
       // Optionally, clear form after successful submission
       setFormData({ name: '', email: '', message: '' }); 
       setErrors({}); // Clear errors on successful submission
@@ -148,7 +148,7 @@ const ContactForm = () => {
             </div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-3">Message Sent!</h3>
             <p className="text-gray-600 mb-6">
-              Your message has been sent successfully. I'll get back to you soon!
+              Thanks for submitting a message. <br/> I'll respond soon {":)"}
             </p>
             <button
               onClick={handleCloseModal}

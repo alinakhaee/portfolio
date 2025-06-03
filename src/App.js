@@ -100,7 +100,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row gap-8 items-stretch">
             {/* Left Column: Text content and contact details */}
             <div className="md:w-1/2 flex flex-col justify-between">
-              <div>
+              <div className="px-4">
                 <h1 className="text-5xl font-bold mb-6">Contact Me</h1>
                 <p className="mb-6 text-lg">
                   If you have a bright idea, or just want to say hi, use the form or <a href="mailto:alinakhaeisharif@gmail.com" className="underline hover:text-gray-300">Send me an email</a>
@@ -172,7 +172,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col relative" style={{
       fontFamily: 'Inter, sans-serif',
-      // overflowX: 'auto',
+      overflowX: 'hidden',
     }}>
       {/* Previous gradient layer */}
       <div style={{
