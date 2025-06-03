@@ -65,7 +65,7 @@ const cards = [
     description: 'University of Windsor, Windsor, ON, Canada. \n Specialized in Algorithm Design and Computational Geometry.',
     languages: ['Algorithm Design', 'Computational Geometry', 'Data Structures',], 
     details1: 'A master\'s degree in computer science with a focus on algorithm design and computational geometry, including data structures, algorithm design, and computational geometry.',
-    details2: '- Submitted a paper to CCCG 2025: "Guarding Polygons with Mutually Visible π-Guards."\n- Conducted research on computational geometry under the supervision of Dr. Ahmad Biniaz.\n- GA for Algorithm Design (2x), Data Structures, Advanced Programming, and Mobile Development.',
+    details2: '- Submitted a paper to **CCCG 2025**: "Guarding Polygons with Mutually Visible π-Guards."\n- Conducted research on computational geometry under the supervision of Dr. Ahmad Biniaz.\n- GA for Algorithm Design (2x), Data Structures, Advanced Programming, and Mobile Development.',
     duration: 'Sept 2023 - May 2025',
   },
   {

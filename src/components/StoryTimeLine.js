@@ -3,12 +3,12 @@ import React, { useState, useMemo, useEffect, useCallback } from 'react';
 // Example intervals with start/end dates (YYYY-MM)
 const intervals = [
   // { title: 'Born', color: 'bg-yellow-300', start: '2000-01', end: '2000-01' },
-  { title: 'Bachelor\'s', color: 'bg-blue-300', start: '2018-09', end: '2023-03' },
-  { title: 'Master\'s', color: 'bg-green-300', start: '2023-09', end: '2025-05' },
+  { title: 'Bachelor\'s Education', color: 'bg-blue-300', start: '2018-09', end: '2023-03' },
+  { title: 'Master\'s Education', color: 'bg-green-300', start: '2023-09', end: '2025-05' },
   { title: 'Part Software Group', color: 'bg-purple-300', start: '2020-04', end: '2020-08' },
-  { title: 'Smart Construction', color: 'bg-pink-300', start: '2020-10', end: '2021-09' },
-  { title: 'Neshan', color: 'bg-orange-300', start: '2021-08', end: '2025-02' },
-  { title: 'Mitacs', color: 'bg-indigo-400', start: '2025-01', end: '2025-05' },
+  { title: 'Smart Construction Inc.', color: 'bg-pink-300', start: '2020-10', end: '2021-09' },
+  { title: 'Neshan Maps & Navigator', color: 'bg-orange-300', start: '2021-08', end: '2025-02' },
+  { title: 'Mitacs Internship', color: 'bg-indigo-400', start: '2025-01', end: '2025-05' },
 ];
 
 // Helper function to convert YYYY-MM to months since a base year (e.g., 2000)
