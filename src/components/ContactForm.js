@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 
+// Helper function to escape special characters for Telegram MarkdownV2
+const escapeMarkdownV2 = (text) => {
+  if (typeof text !== 'string') return '';
+  // Characters to escape for MarkdownV2: _ * [ ] ( ) ~ ` > # + - = | { } . !
+  return text.replace(/([_*[\]()~`>#+\-=|{}.!])/g, '\\$1');
+};
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -8,6 +15,7 @@ const ContactForm = () => {
   });
   const [errors, setErrors] = useState({});
   const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -37,18 +45,73 @@ const ContactForm = () => {
     return Object.keys(newErrors).length === 0; // Return true if no errors
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    if (validateForm()) {
-    // Here you would typically handle form submission (e.g., send data to a server)
-    // For now, we just show the success modal.
-    setShowSuccessModal(true);
-      // Optionally, clear form after successful submission
-      setFormData({ name: '', email: '', message: '' }); 
-      setErrors({}); // Clear errors on successful submission
-    } else {
-      console.log('Validation failed', errors);
-      // Errors are already set by validateForm, so they will be displayed
+    setIsSubmitting(true);
+
+    try {
+      if (validateForm()) {
+        const botToken = process.env.REACT_APP_TELEGRAM_BOT_TOKEN || '';
+        const chatId = process.env.REACT_APP_TELEGRAM_CHAT_ID || '';
+
+        if (!botToken || !chatId) {
+          console.warn(
+            'Telegram Bot Token or Chat ID is not configured in environment variables. Message will not be sent to Telegram.'
+          );
+        }
+  
+        const formattedName = escapeMarkdownV2(formData.name);
+        const formattedEmail = escapeMarkdownV2(formData.email);
+        const formattedMessage = escapeMarkdownV2(formData.message);
+  
+        const textPayload = `*New Contact Form Submission:*
+
+*Name:*
+${formattedName}
+
+*Email:*
+${formattedEmail}
+
+*Message:*
+${formattedMessage}`;
+  
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+  
+        try {
+          const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              chat_id: chatId,
+              text: textPayload,
+              parse_mode: 'MarkdownV2',
+            }),
+          });
+  
+          if (response.ok) {
+            console.log('Message sent to Telegram successfully!');
+          } else {
+            const errorData = await response.json();
+            console.error('Failed to send message to Telegram:', response.status, errorData.description);
+          }
+        } catch (error) {
+          console.error('Error sending message to Telegram:', error);
+        }
+  
+        // Show success modal and clear form regardless of Telegram status
+        setShowSuccessModal(true);
+        setFormData({ name: '', email: '', message: '' }); 
+        setErrors({});
+      } else {
+        console.log('Validation failed', errors);
+      }
+    } catch (error) {
+        console.error("Error during form submission process:", error);
+        // Optionally, set an error message to display to the user here
+    } finally {
+        setIsSubmitting(false);
     }
   };
 
@@ -123,9 +186,20 @@ const ContactForm = () => {
           <div className="flex items-center justify-center">
             <button
               type="submit"
-              className="bg-gradient-to-r from-blue-300 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:shadow-outline w-full"
+              className={`bg-gradient-to-r from-blue-300 to-blue-800 hover:from-blue-400 hover:to-blue-900 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:shadow-outline w-full transition-opacity duration-150 ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
+              disabled={isSubmitting}
             >
-              Send message
+              {isSubmitting ? (
+                <div className="flex items-center justify-center">
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Sending...
+                </div>
+              ) : (
+                'Send message'
+              )}
             </button>
           </div>
         </form>
