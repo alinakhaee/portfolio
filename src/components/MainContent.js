@@ -16,13 +16,13 @@ export default function MainContent() {
 
   return (
     <main className="relative flex flex-col justify-start md:justify-center flex-grow px-4 py-8 w-full min-h-screen overflow-hidden">
-      {/* Text Content - ensure it has a higher z-index if it might overlap */}
-      <div className="z-10 w-full max-w-4xl self-center md:self-start mb-10 md:mb-0 md:pb-[5vmin]"> {/* Added padding-bottom to avoid overlap */}
+      {/* Text Content - Adjust width for md+ screens */}
+      <div className={`z-10 w-full md:w-[60%] lg:w-[55%] self-center md:self-start mb-10 md:mb-0 md:pb-[5vmin] transition-all duration-1000 ease-in-out ${startAnimation ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'}`}>
         <p className={`text-lg md:text-xl lg:text-2xl mx-auto md:mx-12 font-medium text-gray-700 mb-4 md:mb-6 leading-relaxed text-center md:text-left transition-all duration-1000 ease-in-out ${startAnimation ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'}`}>
           Hello, There! <br /> Meet your trusted Full-stack software engineer, <br />crafting ideas into apps, websites, and servers.
         </p>
         <h1
-          className={`font-bold text-black leading-tight whitespace-nowrap mb-8 md:mb-16 mx-auto md:mx-12 text-center md:text-left transition-all duration-1000 ease-in-out delay-200 ${startAnimation ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'}`}
+          className={`font-bold text-black leading-tight mb-8 md:mb-16 mx-auto md:mx-12 text-center md:text-left transition-all duration-1000 ease-in-out delay-200 ${startAnimation ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'}`}
           style={{
             fontSize: 'clamp(2.5rem, 10vw, 6rem)',
           }}
@@ -41,12 +41,12 @@ export default function MainContent() {
         </div>
       </div>
 
-      {/* Flower Image Grid Container - Larger and Repositioned */}
+      {/* Flower Image Grid Container - Add max width/height for md+ screens */}
       <div 
         className={`relative grid grid-cols-2 z-0 
                    w-full aspect-square p-1
-                   md:absolute md:w-[60vmin] md:h-[60vmin] md:aspect-auto 
-                   md:top-1/2 md:right-[5vmin] md:transform md:-translate-y-1/2 
+                   md:absolute md:w-[40vmin] md:h-[40vmin] lg:w-[50vmin] lg:h-[50vmin] 2xl:w-[75vmin] 2xl:h-[75vmin] 2xl:max-w-[900px] 2xl:max-h-[900px] md:aspect-auto 
+                   md:top-[26%] md:right-[5vmin] md:transform md:-translate-y-1/2 lg:top-[26%] lg:transform lg:-translate-y-1/2 xl:top-1/2 xl:right-[5vmin] xl:transform xl:-translate-y-1/2
                    transition-all duration-1000 ease-in-out delay-500 
                    ${startAnimation ? 'opacity-100 md:opacity-90 scale-100' : 'opacity-0 scale-90'}`}
       >

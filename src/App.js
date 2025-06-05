@@ -5,6 +5,7 @@ import WorkCards from './components/WorkCards';
 import chatImg from './chat.svg';
 import StoryTimeline from './components/StoryTimeLine';
 import ContactForm from './components/ContactForm';
+import AnimatedStarBackground from './components/AnimatedGradientBackground';
 
 const sectionGradientColors = {
   Hey: { start: '#facf25', end: '#fffbe6' },
@@ -78,7 +79,7 @@ export default function App() {
     content = <MainContent />;
   } else if (selectedSection === 'Work') {
     content = (
-      <div className="flex flex-col items-center justify-start mt-10 min-h-screen w-full px-4">
+      <div className="flex flex-col items-center justify-start mt-10 w-full px-4 flex-grow">
         <h1 className="text-4xl font-bold text-gray-100 mb-10 text-center">
           Related Experience
         </h1>
@@ -89,13 +90,13 @@ export default function App() {
     );
   } else if (selectedSection === 'Story') {
     content = (
-      <div className="flex flex-col items-center justify-start mt-5 min-h-screen overflow-y-auto">
+      <div className="flex flex-col items-center justify-start mt-5 overflow-y-auto">
         <StoryTimeline />
       </div>
     );
   } else if (selectedSection === 'Chat') {
     content = (
-      <div className="flex flex-col items-center justify-start mt-5 min-h-screen p-4 md:p-8 text-white flex-grow">
+      <div className="flex flex-col items-center justify-start mt-5 p-4 md:p-8 text-white flex-grow">
         <div className="container mx-auto flex flex-col flex-grow w-full">
           <div className="flex flex-col md:flex-row gap-8 items-stretch flex-grow">
             {/* Left Column: Text content and contact details */}
@@ -174,6 +175,7 @@ export default function App() {
       fontFamily: 'Inter, sans-serif',
       overflowX: 'hidden',
     }}>
+      <AnimatedStarBackground selectedSection={selectedSection} sectionGradientColors={sectionGradientColors} />
       {/* Previous gradient layer */}
       <div style={{
         position: 'absolute',
@@ -184,7 +186,7 @@ export default function App() {
         background: `radial-gradient(circle at top center, ${prevGradient.start} 40%, ${prevGradient.end} 100%)`,
         opacity: isTransitioning ? 1 : 0,
         transition: 'opacity 0.2s ease-in-out',
-        zIndex: 0,
+        zIndex: 1,
       }} />
       {/* Next gradient layer */}
       <div style={{
@@ -196,16 +198,18 @@ export default function App() {
         background: `radial-gradient(circle at top center, ${nextGradient.start} 10%, ${nextGradient.end} 100%)`,
         opacity: isTransitioning ? 0 : 1,
         transition: 'opacity 0.8s ease-in-out',
-        zIndex: 1,
+        zIndex: 2,
       }} />
-      <div className="relative z-10">
+      {/* Ensure this container can grow and arrange Header and content slot vertically */}
+      <div className="relative z-10 flex flex-col flex-grow">
         <Header onNavClick={handleGradientChange} />
+        {/* Ensure this content slot can grow */}
         <div style={{
           opacity: contentFade ? 1 : 0,
           transition: 'opacity 0.8s ease-in-out',
           width: '100%',
           overflowX: 'hidden',
-        }}>
+        }} className="flex-grow flex flex-col">
           {content}
         </div>
       </div>
