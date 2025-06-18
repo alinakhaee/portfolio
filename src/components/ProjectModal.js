@@ -21,7 +21,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
               href={project.liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 sm:w-24 sm:h-auto sm:text-sm bg-blue-600 hover:bg-blue-700 text-white sm:px-6 sm:py-2 rounded-lg transition-colors duration-200"
+              className="flex items-center justify-center w-10 h-10 sm:w-auto sm:h-auto whitespace-nowrap sm:text-sm bg-blue-600 hover:bg-blue-700 text-white sm:px-6 sm:py-2 rounded-lg transition-colors duration-200"
             >
               <span className="sm:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
@@ -38,7 +38,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
               href={project.githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-10 h-10 sm:w-24 sm:h-auto sm:text-sm bg-gray-700 hover:bg-gray-800 text-white sm:px-6 sm:py-2 rounded-lg transition-colors duration-200"
+              className="flex items-center justify-center w-10 h-10 sm:w-auto sm:h-auto whitespace-nowrap sm:text-sm bg-gray-700 hover:bg-gray-800 text-white sm:px-6 sm:py-2 rounded-lg transition-colors duration-200"
             >
               <span className="sm:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-5 h-5">
