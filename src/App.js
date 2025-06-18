@@ -6,11 +6,13 @@ import chatImg from './chat.svg';
 import StoryTimeline from './components/StoryTimeLine';
 import ContactForm from './components/ContactForm';
 import AnimatedStarBackground from './components/AnimatedGradientBackground';
+import SkillsRadarChart from './components/SkillsRadarChart';
+import ProjectCards from './components/ProjectCards';
 
 const sectionGradientColors = {
   Hey: { start: '#facf25', end: '#fffbe6' },
   Work: { start: '#080e5c', end: '#bbbcf0' },
-  Story: { start: '#300769', end: '#a69cb5' },
+  Skills: { start: '#300769', end: '#a69cb5' },
   Chat: { start: '#267de0', end: '#d0d9f5' },
 };
 
@@ -79,6 +81,10 @@ export default function App() {
     content = <MainContent />;
   } else if (selectedSection === 'Work') {
     content = (
+      <>
+      <div className="flex flex-col items-center justify-start mt-5 overflow-x-auto">
+          <StoryTimeline />
+        </div>
       <div className="flex flex-col items-center justify-start mt-10 w-full px-4 flex-grow">
         <h1 className="text-4xl font-bold text-gray-100 mb-10 text-center">
           Related Experience
@@ -87,11 +93,13 @@ export default function App() {
           <WorkCards />
         </div>
       </div>
+      </>
     );
-  } else if (selectedSection === 'Story') {
+  } else if (selectedSection === 'Skills') {
     content = (
-      <div className="flex flex-col items-center justify-start mt-5 overflow-y-auto">
-        <StoryTimeline />
+      <div className="flex flex-col items-center justify-start mt-5 overflow-y-auto space-y-12 p-4">
+        <SkillsRadarChart />
+        <ProjectCards />
       </div>
     );
   } else if (selectedSection === 'Chat') {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const navItems = ['Hey', 'Work', 'Story', 'Chat'];
+const navItems = ['Hey', 'Work', 'Skills', 'Chat'];
 
 export default function Header({ onNavClick }) {
   const [selectedItem, setSelectedItem] = useState('Hey');
