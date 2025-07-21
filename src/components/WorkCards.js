@@ -25,15 +25,15 @@ function getContrastTextColor(hexBgColor) {
 const cards = [
   {
     type: 'work',
-    title: 'Full-stack Developer at MealLens (Mitacs Project)',
-    description: 'Before my Master\'s graduation, I had the chance to work on a Mitacs project for MealLens, where I was responsible for entire software development process (front-end + back-end).',
+    title: 'Full-stack Developer at MealLens AI ',
+    description: 'I had the opportunity to work as a Full-stack developer at MealLens AI, a startup company specializing in AI food nutrition, where I was responsible for the entire software system.',
     languages: ['Java', 'AWS', 'React', 'SpringBoot', 'PostgreSQL', 'React Native', 'Expo', 'Docker', 'Kubernetes', 'S3', 'EC2', 'RDS'],
-    details1: 'In a Mitacs project, I was responsible for developing the server, application, website, and cloud infrastructure for MealLens AI, a nascent AI-powered company that offers personal nutrition analysis and recommendations based on the actual inventory each user has.',
+    details1: 'In MealLens AI, I was responsible for developing the server, application, website, and cloud infrastructure. MealLens AI is a nascent AI-powered company that offers personal nutrition analysis and recommendations based on the actual inventory each user has.',
     details2: '- Developed an IOS & Android app and a PWA using **React Native** (Expo)'
     + '\n- Implemented a **React.js** website by reusing the components used in the React Native app, to ensure a solid front-end system.'
     + '\n- Designed and fully implemented a robust backend service using **Spring Boot** and **Java**.'
     + '\n- Deployed services, databases, and files using **AWS EC2**, **RDS**, and **S3** for scalable deployments.',
-    duration: 'Feb 2025 - Jun 2025 (4 months)',
+    duration: 'Sep 2024 - Present (11 months)',
   },
   {
     type: 'work',
