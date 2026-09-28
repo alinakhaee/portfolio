@@ -25,6 +25,18 @@ function getContrastTextColor(hexBgColor) {
 const cards = [
   {
     type: 'work',
+    title: 'Lead Software Engineer at Prompta AI',
+    description: 'Sole technical owner at Prompta AI, designing architectures, making all technical decisions, and mentoring engineers across backend, frontend, and RAG.',
+    languages: ['RAG', 'LLM', 'WorkOS', 'Microsoft Entra', 'Cloud SQL', 'SIEM', 'SSO', 'SCIM', 'GCP'],
+    details1: 'Served as sole technical owner at Prompta AI, designing architectures and making all technical decisions, while mentoring engineers across backend, frontend, and RAG.',
+    details2: '- Rebuilt the **RAG** pipeline, powering it with a vector database and agentic behavior; reducing response times of ~5 minutes to a matter of seconds, with a significant accuracy increase.'
+    + '\n- Led an applied AI project through the **Vector Institute** program, introducing an LLM-based approach for training an ML model for risk prediction, reaching a score of **91%**.'
+    + '\n- Led security remediations for a strict enterprise infosec audit as the sole engineer, implementing **SSO** (through WorkOS & Microsoft Entra) with JIT provisioning and SCIM-based deprovisioning.'
+    + '\n- Hardened the cloud infrastructure with private-IP **Cloud SQL**, centralized SIEM logging, weekly Prowler scans, CSPM via Google Security Command Center, Privileged Access Management, alongside regular monitoring and access controls.',
+    duration: '2025 - 2026',
+  },
+  {
+    type: 'work',
     title: 'Full-stack Developer at MealLens AI ',
     description: 'I had the opportunity to work as a Full-stack developer at MealLens AI, a startup company specializing in AI food nutrition, where I was responsible for the entire software system.',
     languages: ['Java', 'AWS', 'React', 'SpringBoot', 'PostgreSQL', 'React Native', 'Expo', 'Docker', 'Kubernetes', 'S3', 'EC2', 'RDS'],
@@ -33,7 +45,7 @@ const cards = [
     + '\n- Implemented a **React.js** website by reusing the components used in the React Native app, to ensure a solid front-end system.'
     + '\n- Designed and fully implemented a robust backend service using **Spring Boot** and **Java**.'
     + '\n- Deployed services, databases, and files using **AWS EC2**, **RDS**, and **S3** for scalable deployments.',
-    duration: 'Sep 2024 - Present (11 months)',
+    duration: 'May 2025 - Aug 2025 (3 months)',
   },
   {
     type: 'work',

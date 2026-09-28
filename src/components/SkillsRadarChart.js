@@ -2,19 +2,19 @@ import React from 'react';
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ResponsiveContainer } from 'recharts';
 
 const skillsData = [
+  { skill: 'Python', skillMobile: 'Python', level: 95 },
+  { skill: 'Django', skillMobile: 'Django', level: 95 },
   { skill: 'Java', skillMobile: 'Java', level: 100 },
-  { skill: 'Spring Boot', skillMobile: 'SpringBoot', level: 100 },
+  { skill: 'Spring Boot', skillMobile: 'Spring', level: 100 },
   { skill: 'React.js', skillMobile: 'React', level: 90 },
   { skill: 'React Native', skillMobile: 'RN', level: 90 },
-  { skill: 'HTML/CSS/JS/TS', skillMobile: 'Web', level: 90 },
-  { skill: 'Python', skillMobile: 'Python', level: 80 },
-  { skill: 'Node.js', skillMobile: 'Node', level: 80 },
   { skill: 'SQL', skillMobile: 'SQL', level: 95 },
+  { skill: 'RAG & LLMs', skillMobile: 'RAG', level: 90 },
+  { skill: 'Cloud Security', skillMobile: 'Security', level: 90 },
+  { skill: 'GCP', skillMobile: 'GCP', level: 100 },
+  { skill: 'AWS', skillMobile: 'AWS', level: 85 },
   { skill: 'Docker', skillMobile: 'Docker', level: 90 },
   { skill: 'Kubernetes', skillMobile: 'K8s', level: 75 },
-  { skill: 'CI/CD', skillMobile: 'CI/CD', level: 75 },
-  { skill: 'AWS', skillMobile: 'AWS', level: 85 },
-  { skill: 'C++', skillMobile: 'C++', level: 75 },
 ];
 
 export default function SkillsRadarChart() {
