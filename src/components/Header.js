@@ -15,10 +15,10 @@ export default function Header({ onNavClick }) {
     <header className="w-full flex justify-center pt-8 z-10">
       <nav className="bg-black bg-opacity-80 rounded-full px-6 py-3 shadow-lg flex lg:space-x-10 md:space-x-10">
         {navItems.map((item) => (
-          <a
-            href="#"
+          <button
+            type="button"
             key={item}
-            className={`nav-item text-white text-lg font-medium hover:text-yellow-300 transition-colors duration-300 ${
+            className={`nav-item text-white text-lg font-medium hover:text-yellow-300 transition-colors duration-300 border-0 cursor-pointer ${
               selectedItem === item ? 'bg-transparent' : ''
             }`}
             style={{
@@ -30,7 +30,7 @@ export default function Header({ onNavClick }) {
             onClick={e => handleClick(e, item)}
           >
             {item}
-          </a>
+          </button>
         ))}
       </nav>
     </header>

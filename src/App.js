@@ -37,7 +37,6 @@ export default function App() {
   const [prevSection, setPrevSection] = useState('Hey');
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [contentFade, setContentFade] = useState(true);
-  const [pendingSection, setPendingSection] = useState(null);
 
   // Effect to update scrollbar colors based on selectedSection
   useEffect(() => {
@@ -65,7 +64,6 @@ export default function App() {
     setPrevSection(selectedSection);
     setIsTransitioning(true);
     setContentFade(false);
-    setPendingSection(section);
     setTimeout(() => {
       setSelectedSection(section);
       setIsTransitioning(false);

@@ -119,7 +119,7 @@ export default function StoryTimeline() {
       width: newTimelineWidth,
       pxPerMonth: calculatedPxPerMonth,
     });
-  }, [totalMonthsInRange]);
+  }, []);
 
   useEffect(() => {
     calculateTimelineDimensions();

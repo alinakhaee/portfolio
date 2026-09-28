@@ -59,7 +59,7 @@ const cards = [
     + '\n- Decreased the computation time of loading large-scale traffic data up to **50%** by revising the legacy-code algorithms and designing them from scratch with a wiser approach.'
     + '\n- Reduced memory usage by up to **40%** by rewriting heavy components in **C++** (Integrated by JNI) and **Rust**.'
     + '\n- Deployed an XGBoost model for predicting optimal departure time for a given arrival time and route, with over **85%** accuracy.'
-    + '\n- Implemented system health monitoring with **Prometheus** and **Grafana** for 100\% uptime.',
+    + '\n- Implemented system health monitoring with **Prometheus** and **Grafana** for 100% uptime.',
     duration: 'Aug 2021 - Feb 2025 (3 years and 7 months)', 
   },
   {
